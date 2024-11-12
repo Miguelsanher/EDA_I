@@ -36,6 +36,7 @@ tipoPosicion primero(Lista *l);
 tipoPosicion siguiente(tipoPosicion p, Lista *l);
 tipoPosicion anterior(tipoPosicion p, Lista *l);
 tipoPosicion fin(Lista *l);
+tipoPosicion ultimo(Lista *l);
 
 
 #endif // LISTAS_ARRAYS_H_INCLUDED

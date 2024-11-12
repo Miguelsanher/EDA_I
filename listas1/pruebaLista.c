@@ -19,10 +19,13 @@ int main(int argc, char *argv[])
     printf("Se crea una lista de %d elementos\n", numElementos);
     anula(&miLista);	
     p = primero(&miLista);
+    printf("\n\n");
     for (i = 0; i < numElementos; i++) { 
     	codigoError = inserta(rand()%100,p,&miLista);
     	p = siguiente(p,&miLista);
+        printf("%d ",ultimo(&miLista));
     	}
+        printf("\n\n");
     imprime(&miLista);
 
   // Implementar resto de operaciones para probar que el algortimo

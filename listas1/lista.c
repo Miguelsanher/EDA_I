@@ -42,6 +42,9 @@ if(p>l->ultimo || p<=-1){
   l->ultimo=l->ultimo-1;
 }
 }
+tipoPosicion ultimo(Lista *l){
+  return l->ultimo;
+}
 tipoPosicion localiza(tipoElemento x, Lista *l)
 { 
   tipoPosicion q;
