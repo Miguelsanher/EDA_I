@@ -37,6 +37,8 @@ int main(int argc, char *argv[])
      imprime(&miLista);
      int a= localiza(44,&miLista);
      printf("\n\n el numero 44 esta en la posicion %d",a);
+     //recupera(7,&miLista);
+     printf("\n\nEl numero en la pos 7 es: %d",recupera(7,&miLista));
     return 0;
 }
 

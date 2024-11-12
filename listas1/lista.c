@@ -60,6 +60,12 @@ tipoPosicion localiza(tipoElemento x, Lista *l)
 }
 tipoElemento recupera(tipoPosicion p, Lista *l)
 {  
+  tipoPosicion q;
+  if(p>l->ultimo || p<0){
+    return -1;
+  }else{
+    return l->elementos[p];
+  }
  
 }
 void imprime(Lista *l)
