@@ -44,7 +44,18 @@ if(p>l->ultimo || p<=-1){
 }
 tipoPosicion localiza(tipoElemento x, Lista *l)
 { 
-  
+  tipoPosicion q;
+  if(l->ultimo==-1){
+    return -1;
+
+  }else{
+    for(q=0;q<=l->ultimo;q++){
+      if(l->elementos[q]==x){
+        return q;
+      }
+    }
+    return -1;
+  }
 
 }
 tipoElemento recupera(tipoPosicion p, Lista *l)
