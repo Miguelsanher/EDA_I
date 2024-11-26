@@ -36,10 +36,10 @@ int bTernaria(int *vector, int base, int tope,int x)
      if(base>tope) return 0;
      k= (base+tope)/3;
      if(x==vector[k]) return k;//hemos acertado en la eleccion y ha dado que esta en el primer tercio ultimo valor
-     if(x<vector[k]) return bTernaria(vector,base,k);
+     if(x<vector[k]) return bTernaria(vector,base,k,x);
      //diferenciar en k y 2k
      if(x==vector[2*k]) return 2*k;
-     if(x<vector[2*k]) return bTernaria(vector,k,2*k-1);
+     if(x<vector[2*k]) return bTernaria(vector,k,2*k-1,x);
      return bTernaria(vector,2*k,tope)
 }
 
