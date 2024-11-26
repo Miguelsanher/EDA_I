@@ -21,6 +21,12 @@ void HanoiERC(int n,int origen, int destino, int aux)
 // Es mejor que la búsqueda binaria??? análisis y comparativa!!!
 int bTernaria(int *vector, int base, int tope,int x)
 { 
+     int k;
+     if(base>tope) return 0;
+     k= (base+tope)/3;
+     if(x==vector[k]) return k;//hemos acertado en la eleccion y ha dado que esta en el primer tercio ultimo valor
+     if(x<vector[k]) return bTernaria(vector,base,k);
+     if(x>vector[k]) return bTernaria(vector,k,tope);
 }
 
 
