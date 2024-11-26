@@ -14,7 +14,18 @@ void Hanoi(int n,int origen, int destino, int aux)
      }
 }
 void HanoiERC(int n,int origen, int destino, int aux)
-{
+{ while(n>0)
+     {	  Hanoi(n-1,origen, aux, destino);
+          printf(" Mueve dico n %d desde %d a %d \n",n, origen, destino);
+          //Hanoi(n-1, aux,destino, origen);
+          //AJUSTE DE PARAMETROS
+          n--;
+          int temp=origen;
+          origen=aux;
+          aux=temp;
+
+     }
+
 
 }
 // Enunciado 2: búsqueda ternaria (recuperamos funciones de otras sesiones...crearVector, ordenar....)
@@ -26,7 +37,10 @@ int bTernaria(int *vector, int base, int tope,int x)
      k= (base+tope)/3;
      if(x==vector[k]) return k;//hemos acertado en la eleccion y ha dado que esta en el primer tercio ultimo valor
      if(x<vector[k]) return bTernaria(vector,base,k);
-     if(x>vector[k]) return bTernaria(vector,k,tope);
+     //diferenciar en k y 2k
+     if(x==vector[2*k]) return 2*k;
+     if(x<vector[2*k]) return bTernaria(vector,k,2*k-1);
+     return bTernaria(vector,2*k,tope)
 }
 
 
